@@ -8,6 +8,7 @@ namespace winter_task
 {
     internal class Discipline
     {
+        List<string> TypesDiscipline = new List<string>();
 
     }
 }
