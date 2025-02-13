@@ -41,7 +41,7 @@
             this.listBox_groups.FormattingEnabled = true;
             this.listBox_groups.ItemHeight = 16;
             this.listBox_groups.Location = new System.Drawing.Point(79, 71);
-            this.listBox_groups.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox_groups.Margin = new System.Windows.Forms.Padding(4);
             this.listBox_groups.Name = "listBox_groups";
             this.listBox_groups.Size = new System.Drawing.Size(159, 116);
             this.listBox_groups.TabIndex = 0;
@@ -61,7 +61,7 @@
             // 
             this.checkedListBox_preporati.FormattingEnabled = true;
             this.checkedListBox_preporati.Location = new System.Drawing.Point(293, 71);
-            this.checkedListBox_preporati.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkedListBox_preporati.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox_preporati.Name = "checkedListBox_preporati";
             this.checkedListBox_preporati.Size = new System.Drawing.Size(159, 106);
             this.checkedListBox_preporati.TabIndex = 2;
@@ -69,7 +69,7 @@
             // button_AddToZakaz
             // 
             this.button_AddToZakaz.Location = new System.Drawing.Point(499, 84);
-            this.button_AddToZakaz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_AddToZakaz.Margin = new System.Windows.Forms.Padding(4);
             this.button_AddToZakaz.Name = "button_AddToZakaz";
             this.button_AddToZakaz.Size = new System.Drawing.Size(100, 47);
             this.button_AddToZakaz.TabIndex = 3;
@@ -107,7 +107,7 @@
             this.Controls.Add(this.checkedListBox_preporati);
             this.Controls.Add(this.ListB_group);
             this.Controls.Add(this.listBox_groups);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
