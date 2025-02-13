@@ -33,7 +33,7 @@ namespace LR3
                 checkedListBox_preporati.Items.Clear();
                 checkedListBox_preporati.Items.Add("Морфин");
                 checkedListBox_preporati.Items.Add("Немисил");
-                checkedListBox_preporati.Items.Add("Героин");
+                checkedListBox_preporati.Items.Add("Какой-то обезбол");
            }
            if (selectedIndex == 1)
            {
@@ -53,7 +53,11 @@ namespace LR3
 
         private void button_AddToZakaz_Click(object sender, EventArgs e)
         {
-
+            foreach(string s in checkedListBox_preporati.CheckedItems)
+            {
+                listBox_zakazano.Items.Add(s);
+            }
+            
         }
     }
 }
