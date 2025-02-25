@@ -8,26 +8,8 @@ using System.Threading.Tasks;
 
 namespace winter_task
 {
-    internal class Discipline
+    public class Discipline
     {
-
-
-       /* public void ReadAndAddToList(string a, List<string> b)
-        {
-            using (StreamReader SR = new StreamReader(a))
-            {
-                string sr = Convert.ToString(SR.ReadToEnd());
-
-                string[] EnumerationOfDisciplines = sr.Split(';');
-                int number = 0;
-                for (int i = 0; i < EnumerationOfDisciplines.Length; i++)
-                {
-                    b.Add(EnumerationOfDisciplines[number]);
-                    number++;
-                }
-            }
-        }*/
-
         public void NewTest(string a, string b)
         {
             string c = $"D:\\FolderLists\\FolderTest\\{a}";            
