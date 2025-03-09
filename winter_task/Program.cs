@@ -45,7 +45,7 @@ namespace winter_task
                 string CreatingOrPassingTest = Console.ReadLine();
 
                 if (CreatingOrPassingTest == "создать")
-                {
+                {                    
                     Console.WriteLine($"По какой дисциплине вы хотите сделать тест: {String.Join(", ", NameDiscipline)} ");
                     string ReaderOfDiscipline = Console.ReadLine();
                     if (NameDiscipline.Contains(ReaderOfDiscipline))
@@ -53,7 +53,7 @@ namespace winter_task
                         Console.WriteLine("Введите название нового теста, имя не должно повторяться");
                         string NameNewTest = Console.ReadLine();
 
-                        Discipline discipline = new Discipline();
+                        Tests discipline = new Tests();
                         discipline.NewTest(ReaderOfDiscipline, NameNewTest);
                         string EndForQuestion = null;
                         while (EndForQuestion != "ДВВ")
@@ -76,7 +76,6 @@ namespace winter_task
                             Tests tests = new Tests();
                             tests.Writer(ReaderOfDiscipline, NameNewTest, TheQuestion, TheAnswer, lineToWrite);
 
-                            Console.WriteLine("dfghjkl;lkjhgfdsdfghjkllkjhgfghjkjhоапнгщшгнаевкыевчпс рмилтодщгшнш7геасрполщш87ш6гыуевчасрпgffghjkjhgffghjkjhgfdfghhsetgeszrgsdfghergzdnjt");
                             Console.WriteLine("Если вопросов достаточно напишите: ДВВ. Если недостаточно нажмите Enter");
                             EndForQuestion = Console.ReadLine();
                         }
@@ -88,10 +87,10 @@ namespace winter_task
                         if (AddingNewDiscipline == "да")
                         {
                             NameDiscipline.Add(ReaderOfDiscipline);
-                            Console.WriteLine(String.Join(", ", NameDiscipline));
+                            Console.WriteLine("Дисциплина ' " + ReaderOfDiscipline + " ' успешно добавлена.");
                             using (StreamWriter SW = new StreamWriter(PathToListDiscipline, true))
                             {
-                                SW.Write(";" + ReaderOfDiscipline);
+                                SW.Write(ReaderOfDiscipline + ";");
                             }
                         }
                     }

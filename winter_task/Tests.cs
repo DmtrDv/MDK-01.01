@@ -9,18 +9,30 @@ namespace winter_task
 {
     public class Tests
     {
-        private string _NameTest;
+        /*private string _NameTest;
         private string _Question;
         private string _Answer;
-        List<string> VarA = new List<string>();
+        List<string> VarA = new List<string>();*/
 
-        /*public Tests (string NameTest, string Question, string Answer, List<string> VarAnsw)
+        public void NewTest(string a, string b)
         {
-            _NameTest = NameTest;
-            _Question = Question;
-            _Answer = Answer;
-            VarA = VarAnsw;
-        }*/
+            string c = $"D:\\FolderLists\\FolderTest\\{a}";
+            if (Directory.Exists(c) == true)
+            {
+                if (File.Exists($"D:\\FolderLists\\FolderTest\\{a}\\{b}.txt"))
+                {
+                    Console.WriteLine("Такой тест уже есть");
+                }
+                else
+                    File.Create($"D:\\FolderLists\\FolderTest\\{a}\\{b}.txt").Close();
+            }
+            if (Directory.Exists(c) == false)
+            {
+                Directory.CreateDirectory(c);
+                File.Create($"D:\\FolderLists\\FolderTest\\{a}\\{b}.txt").Close();
+            }
+        }
+
         public void Writer(string discipline, string NameTest, string Question, string Answer, string VarAnswer )
         {
             string path = $"D:\\FolderLists\\FolderTest\\{discipline}\\{NameTest}.txt";
@@ -73,6 +85,6 @@ namespace winter_task
             if (percent >= 75 && percent < 90) return mark = 4;
             if (percent >= 50 && percent < 75) return mark = 3;
             else return mark = 2;
-        }
+        }        
     }
 }
