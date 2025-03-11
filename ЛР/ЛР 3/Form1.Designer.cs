@@ -39,39 +39,34 @@
             // listBox_groups
             // 
             this.listBox_groups.FormattingEnabled = true;
-            this.listBox_groups.ItemHeight = 16;
-            this.listBox_groups.Location = new System.Drawing.Point(79, 71);
-            this.listBox_groups.Margin = new System.Windows.Forms.Padding(4);
+            this.listBox_groups.Location = new System.Drawing.Point(59, 58);
             this.listBox_groups.Name = "listBox_groups";
-            this.listBox_groups.Size = new System.Drawing.Size(159, 116);
+            this.listBox_groups.Size = new System.Drawing.Size(120, 95);
             this.listBox_groups.TabIndex = 0;
             this.listBox_groups.SelectedIndexChanged += new System.EventHandler(this.listBox_groups_SelectedIndexChanged);
             // 
             // ListB_group
             // 
             this.ListB_group.AutoSize = true;
-            this.ListB_group.Location = new System.Drawing.Point(79, 48);
-            this.ListB_group.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ListB_group.Location = new System.Drawing.Point(59, 39);
             this.ListB_group.Name = "ListB_group";
-            this.ListB_group.Size = new System.Drawing.Size(95, 16);
+            this.ListB_group.Size = new System.Drawing.Size(75, 13);
             this.ListB_group.TabIndex = 1;
             this.ListB_group.Text = "Список групп";
             // 
             // checkedListBox_preporati
             // 
             this.checkedListBox_preporati.FormattingEnabled = true;
-            this.checkedListBox_preporati.Location = new System.Drawing.Point(293, 71);
-            this.checkedListBox_preporati.Margin = new System.Windows.Forms.Padding(4);
+            this.checkedListBox_preporati.Location = new System.Drawing.Point(220, 58);
             this.checkedListBox_preporati.Name = "checkedListBox_preporati";
-            this.checkedListBox_preporati.Size = new System.Drawing.Size(159, 106);
+            this.checkedListBox_preporati.Size = new System.Drawing.Size(120, 79);
             this.checkedListBox_preporati.TabIndex = 2;
             // 
             // button_AddToZakaz
             // 
-            this.button_AddToZakaz.Location = new System.Drawing.Point(499, 84);
-            this.button_AddToZakaz.Margin = new System.Windows.Forms.Padding(4);
+            this.button_AddToZakaz.Location = new System.Drawing.Point(374, 68);
             this.button_AddToZakaz.Name = "button_AddToZakaz";
-            this.button_AddToZakaz.Size = new System.Drawing.Size(100, 47);
+            this.button_AddToZakaz.Size = new System.Drawing.Size(75, 38);
             this.button_AddToZakaz.TabIndex = 3;
             this.button_AddToZakaz.Text = "Добавить в заказ";
             this.button_AddToZakaz.UseVisualStyleBackColor = true;
@@ -80,34 +75,32 @@
             // NameZakaz
             // 
             this.NameZakaz.AutoSize = true;
-            this.NameZakaz.Location = new System.Drawing.Point(677, 48);
-            this.NameZakaz.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NameZakaz.Location = new System.Drawing.Point(508, 39);
             this.NameZakaz.Name = "NameZakaz";
-            this.NameZakaz.Size = new System.Drawing.Size(124, 16);
+            this.NameZakaz.Size = new System.Drawing.Size(99, 13);
             this.NameZakaz.TabIndex = 5;
             this.NameZakaz.Text = "Заказ состоит из:";
             // 
             // listBox_zakazano
             // 
             this.listBox_zakazano.FormattingEnabled = true;
-            this.listBox_zakazano.ItemHeight = 16;
-            this.listBox_zakazano.Location = new System.Drawing.Point(680, 71);
+            this.listBox_zakazano.Location = new System.Drawing.Point(510, 58);
+            this.listBox_zakazano.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox_zakazano.Name = "listBox_zakazano";
-            this.listBox_zakazano.Size = new System.Drawing.Size(140, 100);
+            this.listBox_zakazano.Size = new System.Drawing.Size(219, 82);
             this.listBox_zakazano.TabIndex = 6;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listBox_zakazano);
             this.Controls.Add(this.NameZakaz);
             this.Controls.Add(this.button_AddToZakaz);
             this.Controls.Add(this.checkedListBox_preporati);
             this.Controls.Add(this.ListB_group);
             this.Controls.Add(this.listBox_groups);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
