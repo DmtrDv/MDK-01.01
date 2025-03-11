@@ -41,8 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Model\IModel.cs" />
+    <Compile Include="Model\PlantsModel.cs" />
+    <Compile Include="Model\TreeNodeModel.cs" />
+    <Compile Include="Plants.cs" />
     <Compile Include="Presenters\Presentor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\IView.cs" />
