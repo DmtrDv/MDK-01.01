@@ -22,6 +22,13 @@ namespace ClassLib.Model
                 Area = "широкая",
                 TypeOfPlant = "куст"
             });
+            plants.Add(new Plants
+            {
+                Name = "Подорожник",
+                Height = "10см",
+                Area = "широкая",
+                TypeOfPlant = "Трава"
+            });
         }
         public Plants getName(string Name)
         {

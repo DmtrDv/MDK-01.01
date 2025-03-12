@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WorkWithTrees
@@ -51,6 +52,13 @@ namespace WorkWithTrees
             }
             FillTreeNodeCollection(treeData_, treeView1.Nodes);
             treeView1.ExpandAll();
+
+            Table_dataGridView.Columns.Add("Name", "Название");
+            Table_dataGridView.Columns.Add("Height", "Высота");
+            Table_dataGridView.Columns.Add("Area", "Зона");
+            Table_dataGridView.Columns.Add("TypeOfPlant", "Тип растения");
+
+            FillTableAliases();
         }
         static private void FillTreeNodeCollection(List<TreeNodeModel> sourceData, //данные источника - модели
                                                    TreeNodeCollection targetData) // данные приемника - представления
@@ -66,7 +74,18 @@ namespace WorkWithTrees
                 }
             }
         }
-        
+
+        private void FillTableAliases()
+        {
+            foreach (DataGridViewColumn column in Table_dataGridView.Columns)
+            {
+                if (Plants.Aliases.TryGetValue(column.Name, out string alias))
+                {
+                    column.HeaderText = alias;
+                }
+            }
+            Table_dataGridView.Columns[Table_dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
 
         private void treeView1_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
