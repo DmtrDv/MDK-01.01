@@ -99,6 +99,15 @@ namespace WorkWithTrees
                 }
             }
         }
-       
+
+        private void saveToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void downloadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
