@@ -30,16 +30,10 @@
         {
             this.listBox_groups = new System.Windows.Forms.ListBox();
             this.ListB_group = new System.Windows.Forms.Label();
-            this.checkedListBox_preporati = new System.Windows.Forms.CheckedListBox();
             this.button_AddToZakaz = new System.Windows.Forms.Button();
             this.NameZakaz = new System.Windows.Forms.Label();
-            this.listBox_zakazano = new System.Windows.Forms.ListBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.SelectionPanel_flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBox_groups
@@ -47,7 +41,7 @@
             this.listBox_groups.FormattingEnabled = true;
             this.listBox_groups.ItemHeight = 16;
             this.listBox_groups.Location = new System.Drawing.Point(52, 71);
-            this.listBox_groups.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox_groups.Margin = new System.Windows.Forms.Padding(4);
             this.listBox_groups.Name = "listBox_groups";
             this.listBox_groups.Size = new System.Drawing.Size(159, 116);
             this.listBox_groups.TabIndex = 0;
@@ -63,19 +57,10 @@
             this.ListB_group.TabIndex = 1;
             this.ListB_group.Text = "Список групп";
             // 
-            // checkedListBox_preporati
-            // 
-            this.checkedListBox_preporati.FormattingEnabled = true;
-            this.checkedListBox_preporati.Location = new System.Drawing.Point(219, 71);
-            this.checkedListBox_preporati.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.checkedListBox_preporati.Name = "checkedListBox_preporati";
-            this.checkedListBox_preporati.Size = new System.Drawing.Size(200, 89);
-            this.checkedListBox_preporati.TabIndex = 2;
-            // 
             // button_AddToZakaz
             // 
             this.button_AddToZakaz.Location = new System.Drawing.Point(52, 264);
-            this.button_AddToZakaz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_AddToZakaz.Margin = new System.Windows.Forms.Padding(4);
             this.button_AddToZakaz.Name = "button_AddToZakaz";
             this.button_AddToZakaz.Size = new System.Drawing.Size(100, 47);
             this.button_AddToZakaz.TabIndex = 3;
@@ -93,57 +78,35 @@
             this.NameZakaz.TabIndex = 5;
             this.NameZakaz.Text = "Заказ:";
             // 
-            // listBox_zakazano
+            // SelectionPanel_flowLayoutPanel
             // 
-            this.listBox_zakazano.FormattingEnabled = true;
-            this.listBox_zakazano.ItemHeight = 16;
-            this.listBox_zakazano.Location = new System.Drawing.Point(680, 71);
-            this.listBox_zakazano.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBox_zakazano.Name = "listBox_zakazano";
-            this.listBox_zakazano.Size = new System.Drawing.Size(291, 100);
-            this.listBox_zakazano.TabIndex = 6;
+            this.SelectionPanel_flowLayoutPanel.Location = new System.Drawing.Point(294, 71);
+            this.SelectionPanel_flowLayoutPanel.Name = "SelectionPanel_flowLayoutPanel";
+            this.SelectionPanel_flowLayoutPanel.Size = new System.Drawing.Size(230, 116);
+            this.SelectionPanel_flowLayoutPanel.TabIndex = 7;
             // 
-            // numericUpDown1
+            // label1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(426, 71);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(54, 22);
-            this.numericUpDown1.TabIndex = 7;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(426, 96);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(54, 22);
-            this.numericUpDown2.TabIndex = 8;
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Location = new System.Drawing.Point(426, 121);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(54, 22);
-            this.numericUpDown3.TabIndex = 9;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(683, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 16);
+            this.label1.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.listBox_zakazano);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SelectionPanel_flowLayoutPanel);
             this.Controls.Add(this.NameZakaz);
             this.Controls.Add(this.button_AddToZakaz);
-            this.Controls.Add(this.checkedListBox_preporati);
             this.Controls.Add(this.ListB_group);
             this.Controls.Add(this.listBox_groups);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,13 +116,10 @@
 
         private System.Windows.Forms.ListBox listBox_groups;
         private System.Windows.Forms.Label ListB_group;
-        private System.Windows.Forms.CheckedListBox checkedListBox_preporati;
         private System.Windows.Forms.Button button_AddToZakaz;
         private System.Windows.Forms.Label NameZakaz;
-        private System.Windows.Forms.ListBox listBox_zakazano;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.FlowLayoutPanel SelectionPanel_flowLayoutPanel;
+        private System.Windows.Forms.Label label1;
     }
 }
 

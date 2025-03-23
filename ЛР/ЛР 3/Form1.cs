@@ -15,12 +15,19 @@ namespace LR3
     {
         Dictionary<string, List<string>> medicationGroups; // Словарь для хранения групп медикаментов и их списка 
 
-        Dictionary<string, Dictionary<string, int>> medicationsSelected; 
-                                                           // Словарь для хранения выбранных медикоментов и их количества
+        Dictionary<string, Dictionary<string, int>> medicationsSelected = new Dictionary<string, Dictionary<string, int>>();
+        // Словарь для хранения выбранных медикоментов и их количества
         public Form1()
         {
             InitializeComponent();
+            InitializeMedication();
+            InitializeData();
 
+           // medicationsSelected = new Dictionary<string, Dictionary<string, int>>();            
+        }
+
+        private void InitializeMedication()
+        {
             medicationGroups = new Dictionary<string, List<string>>
             {
                 { "Обезболы", new List<string>{ "Морфин", "Немисил", "Какой-то обезбол" } },
@@ -28,35 +35,71 @@ namespace LR3
                 { "Остальное", new List<string>{ "уголь активированный", "уголь не активированный", "уголь неправильно активированный" } }
             };
 
-
-            foreach (var group in medicationGroups.Keys)
-            {
-                listBox_groups.Items.Add(group);                
-            }
-            medicationsSelected = new Dictionary<string, Dictionary<string, int>>();
             foreach (var group in medicationGroups.Keys)
             {
                 medicationsSelected[group] = new Dictionary<string, int>();
             }
         }
+        private void InitializeData()
+        {
+            foreach (var group in medicationGroups.Keys)
+            {
+                listBox_groups.Items.Add(group);
+            }
 
+            listBox_groups.SelectedIndexChanged += listBox_groups_SelectedIndexChanged;
+            button_AddToZakaz.Click += button_AddToZakaz_Click;
+        }
         private void listBox_groups_SelectedIndexChanged(object sender, EventArgs e)
         {
-            checkedListBox_preporati.Items.Clear();
-            string selectedItem = listBox_groups.SelectedItem.ToString();
+            SelectionPanel_flowLayoutPanel.Controls.Clear();
 
-            foreach (var med in medicationGroups[selectedItem])
+            string SelectedGroup = listBox_groups.SelectedItem.ToString();
+
+            foreach (var med in medicationGroups[SelectedGroup])
             {
-                checkedListBox_preporati.Items.Add(Text = med);                
+                CheckBox checkBox = new CheckBox { Text = med };
+                NumericUpDown numericUpDown = new NumericUpDown { Minimum = 0, Maximum = 100, Width = 50 };
+                
+                if (medicationsSelected[SelectedGroup].ContainsKey(med))
+                {
+                    numericUpDown.Value = medicationsSelected[SelectedGroup][med];
+                    checkBox.Checked = true;
+                }
+                // Обработчик изменения состояния CheckBox
+                checkBox.CheckedChanged += (s, ev) =>
+                {
+                    if (checkBox.Checked)
+                    {
+                        medicationsSelected[SelectedGroup][med] = (int)numericUpDown.Value;
+                    }
+                    else
+                    {
+                        medicationsSelected[SelectedGroup].Remove(med);
+                    }
+                };
+
+                // Обработчик изменения значения NumericUpDown
+                numericUpDown.ValueChanged += (s, ev) =>
+                {
+                    if (checkBox.Checked)
+                    {
+                        medicationsSelected[SelectedGroup][med] = (int)numericUpDown.Value;
+                    }
+                };
+
+                SelectionPanel_flowLayoutPanel.Controls.Add(checkBox);
+                SelectionPanel_flowLayoutPanel.Controls.Add(numericUpDown);
             }
+            
         }
 
         private void button_AddToZakaz_Click(object sender, EventArgs e)
         {
             string order = "";
-            foreach(string group in checkedListBox_preporati.CheckedItems)
+            foreach(string group in medicationGroups.Keys)
             {
-                order += $"{group}:";
+                order += $"{group}:\n";
                 if (medicationsSelected[group].Count > 0)
                 {
                     foreach (var med in medicationsSelected[group])
@@ -70,9 +113,10 @@ namespace LR3
                     order += "- \n";
                 }
 
-            }
-            listBox_zakazano.Items.Add(order);
-            
+            }            
+            label1.Text = order;
+
+
         }
     }
 }
