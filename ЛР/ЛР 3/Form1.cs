@@ -21,9 +21,7 @@ namespace LR3
         {
             InitializeComponent();
             InitializeMedication();
-            InitializeData();
-
-           // medicationsSelected = new Dictionary<string, Dictionary<string, int>>();            
+            InitializeData();           
         }
 
         private void InitializeMedication()
@@ -109,13 +107,13 @@ namespace LR3
                 }
                 else
                 {
-                    // Если блюда не выбраны, добавляем прочерк
-                    order += "- \n";
+                    
+                    order += "- \n"; // Если блюда нет, то прочерк
                 }
 
             }            
-            label1.Text = order;
-
+            
+            richTextBox1.Text = order;
 
         }
     }

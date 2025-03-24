@@ -33,7 +33,7 @@
             this.button_AddToZakaz = new System.Windows.Forms.Button();
             this.NameZakaz = new System.Windows.Forms.Label();
             this.SelectionPanel_flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // listBox_groups
@@ -85,20 +85,20 @@
             this.SelectionPanel_flowLayoutPanel.Size = new System.Drawing.Size(230, 116);
             this.SelectionPanel_flowLayoutPanel.TabIndex = 7;
             // 
-            // label1
+            // richTextBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(683, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 16);
-            this.label1.TabIndex = 8;
+            this.richTextBox1.Location = new System.Drawing.Point(680, 71);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(261, 276);
+            this.richTextBox1.TabIndex = 9;
+            this.richTextBox1.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.SelectionPanel_flowLayoutPanel);
             this.Controls.Add(this.NameZakaz);
             this.Controls.Add(this.button_AddToZakaz);
@@ -119,7 +119,7 @@
         private System.Windows.Forms.Button button_AddToZakaz;
         private System.Windows.Forms.Label NameZakaz;
         private System.Windows.Forms.FlowLayoutPanel SelectionPanel_flowLayoutPanel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
